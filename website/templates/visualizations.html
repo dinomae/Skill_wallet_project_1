@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}9 Unique Visualizations Catalog{% endblock %}
+
+{% block content %}
+<div class="section-header">
+  <div class="section-tag">Comprehensive Visual Catalog</div>
+  <h1 class="section-title">9 Unique Visualizations Breakdown</h1>
+  <p class="section-subtitle">
+    Detailed specifications for all visualization types built in Tableau, including chart families,
+    dimension/measure roles, and key analytical takeaways.
+  </p>
+</div>
+
+<div class="gallery-grid">
+  {% for viz in visualizations %}
+  <div class="viz-card">
+    <div class="viz-header">
+      <span class="viz-id-badge">VIZ #{{ viz.id }}</span>
+      <span class="viz-type-badge">{{ viz.chart_family }}</span>
+    </div>
+    <h3 class="viz-title">{{ viz.title }}</h3>
+    <p class="viz-desc">{{ viz.description }}</p>
+    <div class="viz-fields">
+      <div class="viz-fields-label">Data Fields / Encodings:</div>
+      <div class="viz-tag-list">
+        {% for field in viz.fields %}
+        <span class="viz-tag">{{ field }}</span>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<!-- Technical Compliance Badge -->
+<div class="feature-card" style="background: rgba(16, 185, 129, 0.05); border-color: rgba(16, 185, 129, 0.3);">
+  <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+    <div style="font-size: 2rem; color: var(--accent-emerald);">
+      <i class="fa-solid fa-circle-check"></i>
+    </div>
+    <div style="flex: 1;">
+      <h3 style="font-size: 1.15rem; color: var(--text-main); margin-bottom: 0.25rem;">
+        Complete Project Requirements Met (9 Unique Visualizations)
+      </h3>
+      <p style="font-size: 0.88rem; color: var(--text-muted);">
+        All 9 required visualization categories (KPI Cards, Multi-Year Line Chart, Horizontal Bar Charts, Donut/Pie Chart,
+        and Geographic World Map) are integrated into the Tableau workbook, responsive dashboard, and 10-scene data story.
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}EV Intelligence Platform{% endblock %} | Tableau & Flask</title>
+  <meta name="description" content="Global Electric Vehicle Market Intelligence Platform embedding Tableau Dashboards and Stories using Flask.">
+  
+  <!-- Font Awesome & Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  {% block extra_head %}{% endblock %}
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="{{ url_for('index') }}" class="brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-bolt"></i>
+        </div>
+        <span>EV PULSE <span class="text-gradient">INTELLIGENCE</span></span>
+      </a>
+
+      <ul class="nav-links">
+        <li>
+          <a href="{{ url_for('index') }}" class="nav-link {% if page == 'home' %}active{% endif %}">
+            <i class="fa-solid fa-house"></i> Home
+          </a>
+        </li>
+        <li>
+          <a href="{{ url_for('dashboard') }}" class="nav-link {% if page == 'dashboard' %}active{% endif %}">
+            <i class="fa-solid fa-chart-line"></i> Dashboard
+          </a>
+        </li>
+        <li>
+          <a href="{{ url_for('story') }}" class="nav-link {% if page == 'story' %}active{% endif %}">
+            <i class="fa-solid fa-book-open"></i> Story
+          </a>
+        </li>
+        <li>
+          <a href="{{ url_for('visualizations') }}" class="nav-link {% if page == 'visualizations' %}active{% endif %}">
+            <i class="fa-solid fa-cubes"></i> 9 Visualizations
+          </a>
+        </li>
+        <li>
+          <a href="{{ url_for('insights') }}" class="nav-link {% if page == 'insights' %}active{% endif %}">
+            <i class="fa-solid fa-lightbulb"></i> Insights
+          </a>
+        </li>
+        <li>
+          <span class="nav-badge"><i class="fa-solid fa-circle" style="font-size: 0.5rem;"></i> LIVE EMBED</span>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content Body -->
+  <main class="main-wrapper">
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="brand-icon" style="width: 28px; height: 28px; font-size: 0.85rem;">
+          <i class="fa-solid fa-bolt"></i>
+        </div>
+        <span>EV Market Intelligence & Analytics Platform</span>
+      </div>
+      <div class="footer-copy">
+        Developed with Tableau Desktop & Public, Python Flask, and Modern Web Standards.
+      </div>
+      <div class="footer-links">
+        <a href="{{ url_for('dashboard') }}" class="footer-link">Dashboard</a>
+        <a href="{{ url_for('story') }}" class="footer-link">Story</a>
+        <a href="{{ url_for('visualizations') }}" class="footer-link">Catalog</a>
+        <a href="{{ url_for('insights') }}" class="footer-link">Report</a>
+      </div>
+    </div>
+  </footer>
+
+  {% block extra_scripts %}{% endblock %}
+</body>
+</html>

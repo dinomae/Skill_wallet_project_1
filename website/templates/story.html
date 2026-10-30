@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}EV Market Journey Story{% endblock %}
+
+{% block content %}
+<div class="section-header" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem;">
+  <div>
+    <div class="section-tag">Guided Data Storytelling</div>
+    <h1 class="section-title">EV Market Journey</h1>
+    <p class="section-subtitle">
+      A 10-scene structured data story guiding stakeholders through the global electric vehicle transformation.
+    </p>
+  </div>
+  <div>
+    <a href="{{ story_url }}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+      <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Story on Tableau Public
+    </a>
+  </div>
+</div>
+
+<div class="story-layout">
+  <!-- Sidebar of Scenes -->
+  <aside class="scenes-sidebar">
+    <h3>
+      <i class="fa-solid fa-list-ol" style="color: var(--accent-cyan);"></i> Story Points (10)
+    </h3>
+    <div class="scene-list">
+      {% for sc in scenes %}
+      <div class="scene-item {% if sc.scene == 1 %}active{% endif %}">
+        <div class="scene-number">SCENE {{ sc.scene }} OF 10</div>
+        <div class="scene-caption">{{ sc.caption }}</div>
+        <div class="scene-desc">{{ sc.description }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </aside>
+
+  <!-- Embed Container -->
+  <div class="embed-section" style="margin-bottom: 0;">
+    <div class="embed-header">
+      <div class="embed-title-group">
+        <h2>Interactive Storyboard View</h2>
+        <p>Use the Tableau story navigation tabs above the visual to step through scenes 1 to 10.</p>
+      </div>
+      <span class="nav-badge"><i class="fa-solid fa-book-open"></i> Full 10-Scene Experience</span>
+    </div>
+
+    <div class="tableau-frame-wrapper">
+      <iframe
+        id="tableau-story-iframe"
+        class="tableau-iframe"
+        src="{{ story_url }}?:embed=y&:showVizHome=no&:host_url=https%3A%2F%2Fpublic.tableau.com%2F&:embed_code_version=3&:tabs=no&:toolbar=yes&:animate_transition=yes&:display_static_image=no&:display_spinner=no&:display_overlay=yes&:display_count=yes&:language=en-US"
+        allowfullscreen="true">
+      </iframe>
+    </div>
+  </div>
+</div>
+{% endblock %}

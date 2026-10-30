@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block title %}Market Intelligence & Insights Report{% endblock %}
+
+{% block content %}
+<div class="section-header">
+  <div class="section-tag">Strategic Executive Briefing</div>
+  <h1 class="section-title">EV Market Intelligence & Insights</h1>
+  <p class="section-subtitle">
+    Synthesized intelligence derived from the 200,000-record global electric vehicle dataset and multi-dimensional Tableau analysis.
+  </p>
+</div>
+
+<!-- Key Findings Grid -->
+<div class="cards-grid" style="margin-bottom: 2.5rem;">
+  <!-- Finding 1 -->
+  <div class="feature-card">
+    <div class="card-icon indigo">
+      <i class="fa-solid fa-battery-three-quarters"></i>
+    </div>
+    <h3 class="card-title">1. Battery Chemistry Dominance</h3>
+    <p class="card-desc">
+      <strong>NMC (Nickel Manganese Cobalt)</strong> and <strong>LFP (Lithium Iron Phosphate)</strong> represent
+      over 75% of total battery market share. NMC delivers higher energy density for extended range (averaging 360+ km),
+      while LFP provides superior cycle longevity and lower cost per kWh for urban commuter platforms.
+    </p>
+    <div class="card-footer">
+      <span class="viz-tag">NMC: High Energy Density</span>
+      <span class="viz-tag">LFP: Cost & Cycle Life</span>
+    </div>
+  </div>
+
+  <!-- Finding 2 -->
+  <div class="feature-card">
+    <div class="card-icon cyan">
+      <i class="fa-solid fa-motorcycle"></i>
+    </div>
+    <h3 class="card-title">2. Urban Mobility & Fleet Share</h3>
+    <p class="card-desc">
+      <strong>Hatchbacks and Two-Wheeler Scooters</strong> dominate annual unit volume, proving that affordable,
+      compact urban mobility is the primary engine of mass-market EV adoption in high-density metropolitan areas across
+      APAC and Europe.
+    </p>
+    <div class="card-footer">
+      <span class="viz-tag">Hatchbacks: Urban Mass Adoption</span>
+      <span class="viz-tag">2-Wheelers: Last-Mile Density</span>
+    </div>
+  </div>
+
+  <!-- Finding 3 -->
+  <div class="feature-card">
+    <div class="card-icon emerald">
+      <i class="fa-solid fa-earth-americas"></i>
+    </div>
+    <h3 class="card-title">3. Global Manufacturing Hubs</h3>
+    <p class="card-desc">
+      Production remains concentrated across key manufacturing hubs in Asia (China, Japan, South Korea), Europe (Germany, France),
+      and North America (USA). Emerging assembly facilities in Southeast Asia and Mexico point toward nearshoring and regional supply chain diversification.
+    </p>
+    <div class="card-footer">
+      <span class="viz-tag">200 OEMs</span>
+      <span class="viz-tag">Supply Chain Nearshoring</span>
+    </div>
+  </div>
+</div>
+
+<!-- Detailed Narrative Report -->
+<div class="feature-card" style="margin-bottom: 3rem;">
+  <h2 style="font-size: 1.5rem; margin-bottom: 1.25rem; color: var(--text-main);">
+    <i class="fa-solid fa-file-lines" style="color: var(--accent-cyan); margin-right: 0.5rem;"></i>
+    Comprehensive Industry Synthesis
+  </h2>
+
+  <div style="font-size: 0.95rem; line-height: 1.75; color: var(--text-muted); display: flex; flex-direction: column; gap: 1.25rem;">
+    <p>
+      The global electric vehicle sector has clearly transitioned from early-adopter experimentation into large-scale commercial maturity. With <strong>17,980 unique vehicle models</strong> offered by <strong>200 distinct manufacturers</strong> and delivering over <strong>1.55 Billion units</strong> cumulatively, the market exhibits vigorous competition across both luxury and value segments.
+    </p>
+    <p>
+      An average customer rating of <strong>4.09 out of 5.0</strong> indicates robust consumer trust in EV powertrain reliability, cabin technology, and charging ecosystem availability. The industry-wide average driving range of <strong>324.54 km</strong> coupled with an average battery capacity of <strong>78.2 kWh</strong> proves that the "range anxiety" threshold has been definitively addressed for standard daily operational profiles.
+    </p>
+    <p>
+      From an infrastructure and policymaking standpoint, regional growth curves illustrate that jurisdictions combining aggressive charging infrastructure buildouts with targeted consumer incentives experience steeper multi-year compounding growth. As solid-state and sodium-ion technologies evolve alongside NMC and LFP chemistries, manufacturing cost curves are projected to achieve parity with internal combustion alternatives across all categories by 2028–2030.
+    </p>
+  </div>
+</div>
+{% endblock %}

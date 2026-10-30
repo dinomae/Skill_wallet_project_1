@@ -1,0 +1,189 @@
+{% extends "base.html" %}
+
+{% block title %}Executive Intelligence Overview{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-pill">
+    <i class="fa-solid fa-atom"></i> Global Electric Vehicle Market Analytics
+  </div>
+  <h1 class="hero-title">
+    Electric Mobility <br><span class="text-gradient">Market Intelligence</span>
+  </h1>
+  <p class="hero-subtitle">
+    Interactive analytical platform analyzing 200,000 global EV records across 200 automotive manufacturers.
+    Explore sales trends, battery technology adoption, customer satisfaction, and international manufacturing density.
+  </p>
+  <div class="hero-actions">
+    <a href="{{ url_for('dashboard') }}" class="btn btn-primary">
+      <i class="fa-solid fa-chart-pie"></i> Launch Executive Dashboard
+    </a>
+    <a href="{{ url_for('story') }}" class="btn btn-secondary">
+      <i class="fa-solid fa-film"></i> Experience 10-Scene Story
+    </a>
+  </div>
+</section>
+
+<!-- KPI Metrics Grid -->
+<div class="section-header">
+  <div class="section-tag">Executive Summary Benchmarks</div>
+  <h2 class="section-title">Core Performance Indicators</h2>
+</div>
+
+<div class="kpi-grid">
+  <div class="kpi-card">
+    <div class="kpi-label">
+      Active Manufacturers
+      <i class="fa-solid fa-industry kpi-icon"></i>
+    </div>
+    <div class="kpi-value text-gradient">{{ metrics.total_manufacturers }}</div>
+    <div class="kpi-subtext">Global automotive OEMs</div>
+  </div>
+
+  <div class="kpi-card">
+    <div class="kpi-label">
+      Vehicle Models
+      <i class="fa-solid fa-car-side kpi-icon"></i>
+    </div>
+    <div class="kpi-value">{{ "{:,}".format(metrics.total_models) }}</div>
+    <div class="kpi-subtext">Commercial & passenger models</div>
+  </div>
+
+  <div class="kpi-card">
+    <div class="kpi-label">
+      Cumulative Deliveries
+      <i class="fa-solid fa-chart-column kpi-icon"></i>
+    </div>
+    <div class="kpi-value text-gradient-cyan">{{ metrics.total_sales_units }}</div>
+    <div class="kpi-subtext">Total global units sold</div>
+  </div>
+
+  <div class="kpi-card">
+    <div class="kpi-label">
+      Customer Rating
+      <i class="fa-solid fa-star kpi-icon" style="color: var(--accent-amber);"></i>
+    </div>
+    <div class="kpi-value">{{ metrics.avg_rating }}</div>
+    <div class="kpi-subtext">High user satisfaction</div>
+  </div>
+
+  <div class="kpi-card">
+    <div class="kpi-label">
+      Average Driving Range
+      <i class="fa-solid fa-route kpi-icon" style="color: var(--accent-emerald);"></i>
+    </div>
+    <div class="kpi-value">{{ metrics.avg_range_km }}</div>
+    <div class="kpi-subtext">Per single full charge</div>
+  </div>
+
+  <div class="kpi-card">
+    <div class="kpi-label">
+      Battery Capacity
+      <i class="fa-solid fa-car-battery kpi-icon" style="color: var(--accent-purple);"></i>
+    </div>
+    <div class="kpi-value">{{ metrics.avg_battery_kwh }}</div>
+    <div class="kpi-subtext">Mean pack energy rating</div>
+  </div>
+</div>
+
+<!-- Feature Modules Cards Grid -->
+<div class="section-header">
+  <div class="section-tag">Interactive Navigation</div>
+  <h2 class="section-title">Explore Analytical Capabilities</h2>
+  <p class="section-subtitle">
+    Integrated Tableau dashboards and stories embedded seamlessly into the Flask runtime.
+  </p>
+</div>
+
+<div class="cards-grid">
+  <!-- Card 1: Dashboard -->
+  <div class="feature-card">
+    <div class="card-icon indigo">
+      <i class="fa-solid fa-chart-pie"></i>
+    </div>
+    <h3 class="card-title">EV Executive Dashboard</h3>
+    <p class="card-desc">
+      A consolidated high-performance executive dashboard with linked cross-filtering. Filter simultaneously by
+      Manufacturer, Vehicle Category, Battery Chemistry, and Country of Origin with sub-second responsiveness.
+    </p>
+    <div class="card-footer">
+      <span style="font-size: 0.85rem; color: var(--text-dim);">Responsive • Interactive Actions</span>
+      <a href="{{ url_for('dashboard') }}" class="btn btn-secondary btn-sm">
+        View Dashboard <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Card 2: Story -->
+  <div class="feature-card">
+    <div class="card-icon cyan">
+      <i class="fa-solid fa-film"></i>
+    </div>
+    <h3 class="card-title">EV Market Journey Story</h3>
+    <p class="card-desc">
+      A guided narrative structured into 10 cohesive scenes. Takes executives through global factory footprints,
+      battery tech shifts (NMC vs LFP), annual delivery trends, customer ratings, and category share.
+    </p>
+    <div class="card-footer">
+      <span style="font-size: 0.85rem; color: var(--text-dim);">10 Structured Scenes • Guided Tour</span>
+      <a href="{{ url_for('story') }}" class="btn btn-secondary btn-sm">
+        Start Journey <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Card 3: 9 Visualizations -->
+  <div class="feature-card">
+    <div class="card-icon emerald">
+      <i class="fa-solid fa-shapes"></i>
+    </div>
+    <h3 class="card-title">9 Unique Visualizations</h3>
+    <p class="card-desc">
+      Explore each chart family individually: KPI Cards, Multi-Year Line Chart, Horizontal Bar Charts,
+      Donut / Pie Chart, and Geographic World Bubble Map. Complete with schema mappings.
+    </p>
+    <div class="card-footer">
+      <span style="font-size: 0.85rem; color: var(--text-dim);">9 Unique Visuals • 0 Calculated Fields</span>
+      <a href="{{ url_for('visualizations') }}" class="btn btn-secondary btn-sm">
+        Browse Catalog <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Architecture & Pipeline Summary -->
+<div class="section-header">
+  <div class="section-tag">Methodology & Architecture</div>
+  <h2 class="section-title">Technical Pipeline Overview</h2>
+</div>
+
+<div class="feature-card" style="margin-bottom: 2rem;">
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem;">
+    <div>
+      <div style="color: var(--accent-cyan); font-weight: 700; margin-bottom: 0.4rem;">
+        <i class="fa-solid fa-database"></i> 1. Data Ingestion & SQL
+      </div>
+      <p style="font-size: 0.85rem;">
+        Loaded 200,000 records across 39 attributes into database. Validated constraints, normalized categorical aliases, and verified integrity.
+      </p>
+    </div>
+    <div>
+      <div style="color: var(--accent-primary); font-weight: 700; margin-bottom: 0.4rem;">
+        <i class="fa-solid fa-file-zipper"></i> 2. Tableau Hyper Extract
+      </div>
+      <p style="font-size: 0.85rem;">
+        Compiled high-speed Tableau Data Extract (.hyper) rendering 100% of data with 0 calculated fields to guarantee maximum rendering throughput.
+      </p>
+    </div>
+    <div>
+      <div style="color: var(--accent-emerald); font-weight: 700; margin-bottom: 0.4rem;">
+        <i class="fa-solid fa-laptop-code"></i> 3. Web UI Integration
+      </div>
+      <p style="font-size: 0.85rem;">
+        Wrapped Tableau Public embed endpoints within a modern Python Flask micro-service with responsive styling and RESTful stats API.
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock %}
