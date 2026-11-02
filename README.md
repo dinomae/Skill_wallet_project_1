@@ -4,7 +4,7 @@
 
 [![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)](https://python.org)
 [![Flask](https://img.shields.io/badge/Flask-3.0+-000000?logo=flask)](https://flask.palletsprojects.com)
-[![Tableau](https://img.shields.io/badge/Tableau-Public-E97627?logo=tableau&logoColor=white)](https://public.tableau.com)
+[![Tableau](https://img.shields.io/badge/Tableau-Public-E97627?logo=tableau&logoColor=white)](https://public.tableau.com/app/profile/uday.ksuwhaha/viz/EV_Market_Performance_Market_Story_2026-10-25_17933746131570/EVExecutiveDashboard)
 [![Snowflake](https://img.shields.io/badge/Snowflake-Data_Warehouse-29B5E8?logo=snowflake&logoColor=white)](https://snowflake.com)
 
 ---
@@ -232,6 +232,13 @@ TABLEAU_STORY_URL     = "https://public.tableau.com/views/YOUR_WORKBOOK/YOUR_STO
 ## 📸 Screenshots
 
 Dashboard and visualization screenshots are available in the [`Screenshots/`](Screenshots/) directory.
+
+---
+
+## 🔗 Live Tableau Public Links
+
+- 📊 **[EV Executive Dashboard](https://public.tableau.com/app/profile/uday.ksuwhaha/viz/EV_Market_Performance_Market_Story_2026-10-25_17933746131570/EVExecutiveDashboard)**
+- 🎬 **[EV Market Journey Story](https://public.tableau.com/app/profile/uday.ksuwhaha/viz/EV_Market_Performance_Market_Story_2026-10-25_17933746131570/EVMarketJourney?publish=yes)**
 
 ---
 

@@ -15,8 +15,8 @@ app = Flask(
 )
 
 # Tableau Public embed URLs — configure with your published URLs
-TABLEAU_DASHBOARD_URL = "https://public.tableau.com/views/EV_Market_Performance_Market_Story_2026-10-25_17933746131570/EVExecutiveDashboard"
-TABLEAU_STORY_URL = "https://public.tableau.com/views/EV_Market_Performance_Market_Story_2026-10-25_17933746131570/EVMarketJourney"
+TABLEAU_DASHBOARD_URL = "https://public.tableau.com/app/profile/uday.ksuwhaha/viz/EV_Market_Performance_Market_Story_2026-10-25_17933746131570/EVExecutiveDashboard"
+TABLEAU_STORY_URL = "https://public.tableau.com/app/profile/uday.ksuwhaha/viz/EV_Market_Performance_Market_Story_2026-10-25_17933746131570/EVMarketJourney?publish=yes"
 
 # Core Project Metrics
 PROJECT_METRICS = {
